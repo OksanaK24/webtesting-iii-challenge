@@ -7,20 +7,30 @@ import { exportAllDeclaration } from "@babel/types";
 afterEach(rtl.cleanup);
 
 // test ("cannot be closed or opened if it is locked", () => {
-//     const wrapper = rtl.render(<Controls />)
 
-//     const CloseButton = wrapper.getByText(/close gate/i)
-//     rtl.act(() => {
-//         rtl.fireEvent.click(CloseButton)
-//     })
+//     const isLocked = jest.fn()
+//     const wrapper = rtl.render(<Controls locked={true}/>)
 
-//     const LockButton = wrapper.getByText(/lock gate/i)
-//     rtl.act(() => {
-//         rtl.fireEvent.click(LockButton)
+//     const OpenButton = wrapper.getByText(/open gate/i)
+
+//     const ClickOpenButton = rtl.act(() => {
+//         rtl.fireEvent.click(OpenButton)
 //     })
     
-//     const OpenButton = wrapper.getByText(/open gate/i)
-//     expect(OpenButton).toBeDisabled();
+//     expect(ClickOpenButton).toBeFalsy();
+
+    // const CloseButton = wrapper.queryByText(/close/i)
+    // rtl.act(() => {
+    //     rtl.fireEvent.click(CloseButton)
+    // })
+
+    // const LockButton = wrapper.queryByText(/lock/i)
+    // rtl.act(() => {
+    //     rtl.fireEvent.click(LockButton)
+    // })
+    
+    // const OpenButton = wrapper.queryByText(/open/i)
+    // expect(OpenButton).toBeDisabled();
 // } )
 
 // After all those click it doesn't show that I have Open Gate button. why? learn how it exactly works!!
